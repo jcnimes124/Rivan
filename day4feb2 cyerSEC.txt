@@ -190,7 +190,7 @@ intentionally hackable websites
 task6: How to Make CUCM intentionally hackable to Learn
 the Basics for Firewalls.
 before: nmap -v 10.m.100.8
-@Cucm:
+@Cucm: = fa 0/0/ or CSR1000V = GI3
 config t
 int Gi 3
  no shut
