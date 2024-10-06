@@ -334,6 +334,14 @@ config t
 ntp server 216.239.35.8
 end
 show ntp associations
+GIVE IP ADDRESS TO LINUX BLDGONE AND BLDGTWO:
+sudo su
+bldg1:
+ifconfig eth0 192.168.103.11 netmask 255.255.255.0 up
+route add default gw 192.168.103.8
+bldg2:
+ifconfig eth0 192.168.103.12 netmask 255.255.255.0 up
+route add default gw 192.168.103.8
 
 TASK9: NAT: NETWORK ADDRESS TRANSLATION SERVICE:
 nat, proxy, hotspot, tethering, = PENGE INTERNET
@@ -353,8 +361,8 @@ no access-list 7
 access-list 7 permit 192.168.102.0 0.0.0.255
 access-list 7 permit 192.168.103.0 0.0.0.255
 ip nat inside source list 7 interface Gi 1 overload
-ip nat inside source static 192.168.102.69 192.168.108.69
-ip nat inside source static 192.168.103.88 192.168.108.88
+ip nat inside source static 192.168.103.11 192.168.108.69
+ip nat inside source static 192.168.103.12 192.168.108.88
 end
 
 TASK10: DO YOU HAVE TO REPLACED BY A.I AT WORK? REPLACED BY
